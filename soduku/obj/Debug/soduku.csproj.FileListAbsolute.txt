@@ -1,0 +1,6 @@
+C:\Users\info\Desktop\soduku\soduku\bin\Debug\soduku.exe.config
+C:\Users\info\Desktop\soduku\soduku\bin\Debug\soduku.exe
+C:\Users\info\Desktop\soduku\soduku\bin\Debug\soduku.pdb
+C:\Users\info\Desktop\soduku\soduku\obj\Debug\soduku.csprojResolveAssemblyReference.cache
+C:\Users\info\Desktop\soduku\soduku\obj\Debug\soduku.exe
+C:\Users\info\Desktop\soduku\soduku\obj\Debug\soduku.pdb
