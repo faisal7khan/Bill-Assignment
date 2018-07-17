@@ -59,24 +59,18 @@ namespace soduku
                 new int[] {1,2,3,4},
                 new int[] {3,5,4}
             };
-            //// if (ValidateSudoku(badSudoku1))
-            //     Console.WriteLine("True");
-            // else
-            //     Console.WriteLine("False");
-            //Console.WriteLine(badSudoku2[3][3]);
-            // ValidateSudoku(goodSudoku1);
-            //Debug.Assert(true,(goodSudoku1[2][1].ToString()));
             if (ValidateSudoku(goodSudoku1))
                 Console.WriteLine("This is supposed to validate! It's a good sudoku!");
             else
                 Console.WriteLine("This isn't supposed to validate! It's a bad sudoku!");
         }
-
+		//function to check is the puzzle is valid sudoku or not
         static bool ValidateSudoku(int[][] puzzle)
         {
             int Size = puzzle.GetLength(0);
             for (int i = 0; i < Size; i++)
             {
+				//if both row and col function return true the loop will contine else the loop will terminate and return false
                 if (CheckRow(i, puzzle) && CheckCol(i, puzzle))
                     continue;
                 else
@@ -84,7 +78,7 @@ namespace soduku
             }
             return true;
         }
-
+		//checking elements of row if there are any repititins
         static bool CheckRow(int row, int[][] sudoku)
         {
             int Size = sudoku.GetLength(0);
@@ -102,8 +96,8 @@ namespace soduku
                     return false;
             }
             return true;
-            // Console.WriteLine(arr);
         }
+		//checking elements of col if there are any repititins
         static bool CheckCol(int col, int[][] sudoku)
         {
             int Size = sudoku.GetLength(0);
@@ -121,27 +115,10 @@ namespace soduku
                     return false;
             }
             return true;
-            // Console.WriteLine(arr);
         }
-        //static bool CheckSquare(int col, int[][] sudoku)
-        //{
-        //    int[] arr = new int[9];
-        //    int j = 0;
-        //    for (int i = 0; i < 9; i++)
-        //    {
-        //        arr[i] = sudoku[i][col];
-        //    }
-        //    quickSort(arr, 0, 8);
-        //    for (int i = 0; i < 9; i++)
-        //    {
-        //        if (i + 1 == arr[i])
-        //            continue;
-        //        else
-        //            return false;
-        //    }
-        //    return true;
-        //    // Console.WriteLine(arr);
-        //}
+        //using quick sort to sort the array in assending order
+		// sorting because i wont need to check each element one by one with the other elements
+		//rather i would olny check if the loop digit + 1 is equal to the item of array or not
         static void quickSort(int[] arr, int left, int right)
         {
             int i = left, j = right;
